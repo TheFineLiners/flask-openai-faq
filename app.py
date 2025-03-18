@@ -1,11 +1,12 @@
 from flask import Flask, request, jsonify
 from flask_cors import CORS
 import openai
+import os
 
 app = Flask(__name__)
 CORS(app)
 
-openai.api_key = "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"
+openai.api_key = os.getenv("OPENAI_API_KEY")
 
 
 @app.route("/generate-faq", methods=["POST"])
