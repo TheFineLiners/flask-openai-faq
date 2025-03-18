@@ -5,7 +5,7 @@ import openai
 app = Flask(__name__)
 CORS(app)
 
-openai.api_key = "OPENAI_API_KEY"
+openai.api_key = "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"
 
 
 @app.route("/generate-faq", methods=["POST"])
